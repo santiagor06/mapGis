@@ -1,0 +1,27 @@
+<div class="main">
+  <div [ngSwitch]="id" class="map-container">
+    <app-map-mesure
+      *ngSwitchCase="'5ce0de673d3b41a3bf3a217942211c4b'"
+    ></app-map-mesure>
+    <app-map *ngSwitchCase="'a72bb6468f57491f84409186446808e1'"></app-map>
+    <app-map-temp
+      *ngSwitchCase="'635fb805ecfe4a8cbad3e58cca8a4bd3'"
+    ></app-map-temp>
+    <app-map-conflict
+      *ngSwitchCase="'5d149acd55c74e6cb9373c4922a10776'"
+    ></app-map-conflict>
+  </div>
+
+  <div class="description-container">
+    <div class="description">
+      <h2>{{ map()?.title }}</h2>
+      <p>
+        {{ map()?.description }}
+      </p>
+      <h3 *ngIf="map()?.shapes?.length">Capas:</h3>
+      <ul>
+        <li *ngFor="let shape of map()?.shapes">{{ shape }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

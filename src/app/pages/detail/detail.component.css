@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 89%;
+}
+.map-container {
+  width: 75%;
+}
+.description-container {
+  width: 25%;
+  display: flex;
+  padding: 24px 24px;
+  align-items: center;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  min-height: 90%;
+}
+.description p {
+  text-align: justify;
+}
+.description h2 {
+  text-align: center;
+}
